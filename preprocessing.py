@@ -32,12 +32,26 @@ def stem(text):
 
 def lemmatize(text):
     nlp = spacy.load('en_core_web_sm')
-    doc = nlp(text)
-    return [token.lemma_ for token in doc]
+    if isinstance(text, str):
+        doc = nlp(text)
+        return [token.lemma_ for token in doc]
+    elif isinstance(text, list):
+        lemmatized_texts = []
+        for t in text:
+            doc = nlp(t)
+            lemmatized_texts.append([token.lemma_ for token in doc])
+        return lemmatized_texts
+    else:
+        raise ValueError("Input should be a string or a list of strings.")
 
 
 def remove_whitespace(text):
-    return " ".join(text.split())
+    if isinstance(text, str):
+        return " ".join(text.split())
+    elif isinstance(text, list):
+        return [" ".join(str(t).split()) for t in text]
+    else:
+        raise ValueError("Input should be a string or a list of strings.")
 
 
 def vectorisation(text):
@@ -49,8 +63,9 @@ def vectorisation(text):
 def do_preprocessing(text):
     text = lowercase(text)
     text = remove_punctuation(text)
-    text = remove_stopwords(text)
-    text = stem(text)
-    text = lemmatize(text)
+    #text = remove_stopwords(text)
+    #text = stem(text)
+    #text = lemmatize(text)
     text = remove_whitespace(text)
     return text
+
