@@ -59,13 +59,18 @@ def vectorisation(text):
     doc = nlp(text)
     return doc.vector
 
+def average_sentence_length(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len(doc) / len(list(doc.sents))
+
 
 def do_preprocessing(text):
+    print(average_sentence_length(text))
     text = lowercase(text)
     text = remove_punctuation(text)
-    #text = remove_stopwords(text)
-    #text = stem(text)
-    #text = lemmatize(text)
+    text = remove_stopwords(text)
+    # text = stem(text)
+    # text = lemmatize(text)
     text = remove_whitespace(text)
     return text
-
