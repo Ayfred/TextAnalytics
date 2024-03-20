@@ -64,13 +64,156 @@ def average_sentence_length(text):
     doc = nlp(text)
     return len(doc) / len(list(doc.sents))
 
+def average_word_length(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len(doc) / len(list(doc))
+
+def count_punctuation(text):
+    return sum([1 for char in text if char in string.punctuation])
+
+
+def most_common_words(text, n=10):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    words = [token.text for token in doc if not token.is_stop and not token.is_punct]
+    word_freq = pd.Series(words).value_counts()
+    return word_freq.head(n)
+
+def lexical_diversity(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len(set([token.text for token in doc])) / len([token.text for token in doc])
+
+def semantic(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return doc.vector
+
+def word_count(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len(doc)
+
+def count_verbs(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len([token.text for token in doc if token.pos_ == "VERB"])
+
+def count_nouns(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len([token.text for token in doc if token.pos_ == "NOUN"])
+
+def count_adjectives(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len([token.text for token in doc if token.pos_ == "ADJ"])
+
+def count_adverbs(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len([token.text for token in doc if token.pos_ == "ADV"])
+
+def count_pronouns(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len([token.text for token in doc if token.pos_ == "PRON"])
+
+def count_conjunctions(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len([token.text for token in doc if token.pos_ == "CCONJ"])
+
+def count_prepositions(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len([token.text for token in doc if token.pos_ == "ADP"])
+
+def count_determiners(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len([token.text for token in doc if token.pos_ == "DET"])
+
+def count_numbers(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len([token.text for token in doc if token.pos_ == "NUM"])
+
+def count_foreign_words(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len([token.text for token in doc if token.is_oov])
+
+def count_wh_words(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len([token.text for token in doc if token.tag_ == "WDT" or token.tag_ == "WP" or token.tag_ == "WP$" or token.tag_ == "WRB"])
+
+def sentiment_score(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return doc._.polarity
+
+def count_slang(text):
+    slang_words = [
+        "lit", "fam", "yeet", "bruh", "flex", "bae", "GOAT", "on fleek", "squad", "thirsty",
+        "turnt", "woke", "chill", "savage", "thicc", "stan", "sus", "vibe", "basic", "AF",
+        "TBH", "YOLO", "swerve", "smh", "LOL", "WTF", "OMG", "BTW", "ICYMI", "IDK", "TL;DR",
+        "IMO", "IMHO", "ROFL", "BRB", "JK", "FTW", "LMAO", "TMI", "OOTD", "FOMO", "AMA", "DM",
+        "FF", "ICYMI", "NSFW", "TLDR", "TBT", "TIL", "IMO", "TLDR", "GTFO", "ICYMI", "OOTD",
+        "IMO", "IRL", "WBU", "BFF", "BTFO", "WYD", "MFW", "MRW", "AMA", "Dank", "Salty",
+        "Lit AF", "Shook", "Gucci", "Slay", "Extra", "Hundo P", "Sis", "Mood", "No cap",
+        "Bless up", "Woke", "Bop", "Wig", "Flex", "Snatched", "Swag", "Hype", "Glow up",
+        "Sip tea", "Keep it 100", "G.O.A.T", "Throw shade", "Tea", "Sus", "Ratchet", "Stan",
+        "Hangry", "Spill the tea", "Thirst trap", "Ship", "Tea", "Hundo", "Ship", "Deadass",
+        "Troll", "Ship", "Troll", "Feels", "Simp", "Blessed", "Salty", "Cray", "Wig", "Turn up",
+        "Highkey", "Lowkey", "Finsta", "Thicc", "Swerve", "Bop", "Curve", "Salty", "Savage",
+        "Thirsty", "Troll", "Yas", "Yeet"
+    ]
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text.lower())  # Convert text to lowercase for case-insensitive matching
+    return len([token.text for token in doc if token.text.lower() in slang_words])
+
+
+def pronoun_density(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return len([token.text for token in doc if token.pos_ == "PRON"]) / len([token.text for token in doc])
+
+def delete_backslash_n(text):
+    return text.replace('\n', '')
+
 
 def do_preprocessing(text):
-    print(average_sentence_length(text))
-    text = lowercase(text)
-    text = remove_punctuation(text)
-    text = remove_stopwords(text)
+    text = delete_backslash_n(text)
+
+    print("Average sentence length: ", average_sentence_length(text))
+    print("Average word length: ", average_word_length(text))
+    print("Count punctuation: ", count_punctuation(text))
+    print("Most common words: ", most_common_words(text))
+    print("Lexical diversity: ", lexical_diversity(text))
+    print("Word count: ", word_count(text))
+    print("Count verbs: ", count_verbs(text))
+    print("Count nouns: ", count_nouns(text))
+    print("Count adjectives: ", count_adjectives(text))
+    print("Count adverbs: ", count_adverbs(text))
+    print("Count pronouns: ", count_pronouns(text))
+    print("Count conjunctions: ", count_conjunctions(text))
+    print("Count prepositions: ", count_prepositions(text))
+    print("Count determiners: ", count_determiners(text))
+    print("Count numbers: ", count_numbers(text))
+    print("Count foreign words: ", count_foreign_words(text))
+    print("Count wh words: ", count_wh_words(text))
+    #print("Average sentiment score: ", sentiment_score(text))
+    print("Count slang: ", count_slang(text))
+    print("Pronoun density: ", pronoun_density(text))
+
+
+    #text = lowercase(text)
+    #text = remove_punctuation(text)
+    #text = remove_stopwords(text)
     # text = stem(text)
     # text = lemmatize(text)
-    text = remove_whitespace(text)
+    #text = remove_whitespace(text)
     return text
