@@ -282,8 +282,8 @@ def export_to_csv(data, csv_filename):
     df.to_csv(csv_filename, index=False)
 
 def main():
-    folder_path = './data'  # Change this to your folder path
-    csv_filename = './dataset/features.csv'  # Change this to your desired CSV file name
+    folder_path = './data'
+    csv_filename = './dataset/features.csv'
     data = process_folder(folder_path)
     export_to_csv(data, csv_filename)
     print("CSV export successful.")

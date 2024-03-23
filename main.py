@@ -1,5 +1,5 @@
-import preprocessing as pp
-import feature_extraction as fe
+import statistics.preprocessing as pp
+import statistics.feature_extraction as fe
 
 def __main__():
 
