@@ -248,16 +248,22 @@ def extract_features(text):
         break
     return features
 
+import re
 # Function to determine target value based on file name
 def get_target(file_name):
-    return 'male' if 'male' in file_name else 'female'
+    if re.match(r'^male', file_name):
+        return 'male'
+    elif re.match(r'^female', file_name):
+        return 'female'
+    else:
+        return None 
 
 # Function to process each file
 def process_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
         features = extract_features(text)
-        target = get_target(file)
+        target = get_target(os.path.basename(file_path))
         return {**features, 'gender': target}
 
 # Main function to process all files in the folder
