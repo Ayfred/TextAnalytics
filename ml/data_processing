@@ -24,7 +24,6 @@ y_encoded = label_encoder.fit_transform(y)
 
 # Combine numerical features and target variable
 preprocessed_data = pd.DataFrame(X_text_vectorized.toarray(), columns=tfidf_vectorizer.get_feature_names_out())
-print(preprocessed_data.head())
 preprocessed_data['gender'] = y_encoded
 
 data = data.drop('most_common_words', axis=1)

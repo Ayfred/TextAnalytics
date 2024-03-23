@@ -162,6 +162,7 @@ def delete_backslash_n(text):
     return text.replace('\n', '')
 
 from collections import Counter
+
 def pos_distribution(text):
     doc = nlp(text)
     
@@ -171,9 +172,17 @@ def pos_distribution(text):
         pos_counts[token.pos_] += 1
     
     total_tokens = len(doc)
-    pos_distribution = {pos: count / total_tokens for pos, count in pos_counts.items()}
+    pos_distribution = {}
+    
+    # Define all possible POS tags
+    all_pos_tags = ['ADJ', 'ADP', 'ADV', 'AUX', 'CONJ', 'DET', 'INTJ', 'NOUN', 'NUM', 'PART', 'PRON', 'PROPN', 'PUNCT', 'SCONJ', 'SYM', 'VERB']
+    
+    # Calculate distribution for each POS tag
+    for pos_tag in all_pos_tags:
+        pos_distribution[pos_tag] = pos_counts[pos_tag] / total_tokens if pos_counts[pos_tag] else 0
     
     return pos_distribution
+
 
 import numpy as np
 def pos_statistics(text):
@@ -235,11 +244,6 @@ def extract_features(text):
     pronoun_density_values = calculate_pronoun_densities(text)
     for pronoun, density in pronoun_density_values.items():
         features[f'pronoun_density_{pronoun}'] = density
-        break
-
-    pos_distribution_values = pos_distribution(text)
-    for pos, distribution in pos_distribution_values.items():
-        features[f'pos_distribution_{pos}'] = distribution
         break
 
     pos_statistics_values = pos_statistics(text)
