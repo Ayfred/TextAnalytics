@@ -1,0 +1,28 @@
+from statsmodels.multivariate.manova import MANOVA
+import numpy as np
+import statsmodels.api as sm
+import pandas as pd
+from patsy import dmatrices
+
+# Load the data
+data = pd.read_csv("./dataset/preprocessed_data.csv")
+
+# shuffle the rows
+data = data.sample(frac=1).reset_index(drop=True)
+
+print(data)
+
+# Define the dependent variables
+dependent_vars = data.columns.tolist()[:10]  # Excluding the target variable
+
+# Define the independent variable
+independent_var = "gender"
+
+formula = " + ".join(dependent_vars) + " ~ " + independent_var
+
+y, X = dmatrices(formula, data, return_type='dataframe')
+
+maov = MANOVA(endog=y, exog=X)
+
+
+print(maov.mv_test())
