@@ -1,42 +1,62 @@
-import nltk
-from nltk.tokenize import word_tokenize, sent_tokenize
-from nltk.corpus import stopwords
-from collections import Counter
-import string
-#nltk.download('punkt')
-#nltk.download('stopwords')
-import re
+import pandas as pd
+import numpy as np
+import statsmodels.api as sm
 
-# Load the text data
-with open('female.txt', 'r', encoding='utf-8') as file:
-    data = file.read()
+# Generate synthetic data for dependent variables (statistics)
+np.random.seed(0)
+num_samples = 100
+dependent_vars = pd.DataFrame({
+    'avg_sentence_length': np.random.normal(20, 5, num_samples),
+    'avg_word_length': np.random.normal(6, 1, num_samples),
+    # Add other dependent variables here
+})
 
-# Tokenize the text into words
-words = word_tokenize(data)
+print(dependent_vars)
 
-# Tokenize the text into sentences
-sentences = sent_tokenize(data)
+# Define the independent variable (gender)
+gender = np.random.choice(['male', 'female'], num_samples)
 
-# Calculate the average sentence length
-avg_sent_length = sum(len(sent) for sent in sentences) / len(sentences)
+# covariate = np.random.normal(50, 10, num_samples)
+covariate = np.random.normal(50, 10, num_samples)
 
-# Count the frequency of each word
-word_freq = Counter(words)
+print(gender)
 
-# Count the number of stopwords
-stop_words = set(stopwords.words('english'))
-num_stopwords = sum(freq for word, freq in word_freq.items() if word in stop_words)
 
-# Count the number of punctuation marks
-num_punctuation = sum(freq for word, freq in word_freq.items() if word in string.punctuation)
+# Create a DataFrame with independent variable and covariate
+data = pd.DataFrame({
+    'gender': gender, 
+    'covariate': covariate
+})
 
-# Extract citation practices
-citations = re.findall(r'\[\d+\]', data)
-num_citations = len(citations)
+print(data)
 
-# Print the results
-print(f'Average sentence length: {avg_sent_length}')
-print(f'Number of stopwords: {num_stopwords}')
-print(f'Number of punctuation marks: {num_punctuation}')
-print(f'Number of citations: {num_citations}')
+# Concatenate the dependent variables with the independent variables and covariate
+data = pd.concat([data, dependent_vars], axis=1)
 
+print(data)
+
+
+def mancova(data, dependent, independent):
+    """
+    Perform a MANCOVA test.
+
+    Args:
+    data: pandas DataFrame
+    dependent: str
+    independent: str
+
+    Returns:
+    result: statsmodels.multivariate.manova.MANOVA
+    """
+    # Add a constant to the DataFrame
+    data = sm.add_constant(data)
+    
+    # Fit the model
+    model = sm.MANOVA.from_formula(f"{dependent} ~ {independent}", data=data)
+
+    # Perform the MANCOVA test
+    result = model.mv_test()
+
+    return result
+
+print(mancova(data, 'avg_sentence_length + avg_word_length', 'gender + covariate'))
