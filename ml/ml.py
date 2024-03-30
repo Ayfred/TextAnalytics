@@ -500,7 +500,7 @@ def tune_hyperparameters(X_train_scaled, y_train):
     print("Best Hyperparameters:", grid_search.best_params_)
 
 #tune_hyperparameters(X_train_scaled, y_train)
-
+""" 
 # Cross-Validation
 from sklearn.model_selection import cross_val_score
 
@@ -528,14 +528,14 @@ def feature_importance(X_train_scaled, y_train):
     # Get feature importances
     feature_importances = random_forest.feature_importances_
 
-    print("Feature Importances:", feature_importances)
+    print("Feature Importances:", feature_importances) """
 
 #feature_importance(X_train_scaled, y_train)
 
 # Save Model
 import joblib
 
-def save_model(X_train_scaled, y_train):
+""" def save_model(X_train_scaled, y_train):
 
     # Initialize Random Forest Classifier
     random_forest = RandomForestClassifier(random_state=42)
@@ -561,4 +561,4 @@ def load_model(X_test_scaled, y_test):
 
     print("Test Accuracy:", test_accuracy)
 
-    
+     """
