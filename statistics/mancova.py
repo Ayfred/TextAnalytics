@@ -12,7 +12,7 @@ def mancova(data, dependent, independent):
     independent: str
 
     Returns:
-    result: statsmodels.multivariate.manova.MANOVA
+    result: statsmodels.multivariate.manova.py.MANOVA
     """
     # Add a constant to the DataFrame
     data = sm.add_constant(data)

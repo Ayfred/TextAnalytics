@@ -22,10 +22,7 @@ independent_var = "gender"
 
 formula = " + ".join(dependent_vars) + " ~ " + independent_var
 
-y, X = dmatrices(formula, data, return_type='dataframe')
-print(X)
-print(y)
-
+y, X = dmatrices(formula, data, return_type='dataframe')*
 # Check for multicollinearity
 vif = pd.DataFrame()
 vif["Variable"] = X.columns

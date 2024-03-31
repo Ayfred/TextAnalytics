@@ -234,22 +234,32 @@ def extract_features(text):
     pos = count_pos(text)
     for pos_tag, count in pos.items():
         features[f'count_{pos_tag}'] = count
-        break
 
     particular_punctuations = count_particular_punctuation(text)
     for punctuation, count in particular_punctuations.items():
-        punctuation_cleaned = punctuation.replace(';', 'semi_colon')
+        punctuation_cleaned = (punctuation
+                               .replace(';', 'semi_colon')
+                               .replace(':', 'colon')
+                               .replace('!', 'exclamation')
+                               .replace('?', 'question')
+                               .replace(',', 'comma')
+                               .replace('.', 'period')
+                               .replace('-', 'dash'))
         features[f'count_{punctuation_cleaned}'] = count
+
+    pos_distribution_values = pos_distribution(text)
+    for pos_tag, distribution in pos_distribution_values.items():
+        features[f'pos_distribution_{pos_tag}'] = distribution
 
     pronoun_density_values = calculate_pronoun_densities(text)
     for pronoun, density in pronoun_density_values.items():
         features[f'pronoun_density_{pronoun}'] = density
-        break
+
 
     pos_statistics_values = pos_statistics(text)
     for stat, value in pos_statistics_values.items():
         features[f'pos_statistics_{stat}'] = value
-        break
+
     return features
 
 import re
