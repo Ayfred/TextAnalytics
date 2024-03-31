@@ -1,0 +1,29 @@
+Correlation matrix:
+d:\maxim\OneDrive - IMT MINES ALES\Bureau\Semester2\Semester2\CS7IS4 - Text Analytics\Group_Project\TextAnalytics\ml\statistical_analysis.py:21: FutureWarning: The default value of numeric_only in DataFrame.corr is deprecated. In a future version, it will default to False. Select only valid columns or specify the value of numeric_only to silence this warning.
+  correlation_matrix = data.corr()
+                              word_count  average_sentence_length  average_word_length  ...  pos_statistics_std_deviation  pos_statistics_max_count  pos_statistics_min_count
+word_count                      1.000000                 0.150338                  NaN  ...                      0.927260                  0.868975                  0.182451
+average_sentence_length         0.150338                 1.000000                  NaN  ...                      0.107469                  0.056334                  0.046101
+average_word_length                  NaN                      NaN                  NaN  ...                           NaN                       NaN                       NaN
+total_count_punctuation         0.819467                 0.181482                  NaN  ...                      0.686445                  0.605680                  0.124867
+lexical_diversity              -0.760146                -0.162895                  NaN  ...                     -0.704637                 -0.619187                 -0.077610
+...                                  ...                      ...                  ...  ...                           ...                       ...                       ...
+pos_statistics_mean_count       0.983710                 0.160382                  NaN  ...                      0.934702                  0.880332                  0.234792
+pos_statistics_median_count     0.784710                 0.178160                  NaN  ...                      0.640641                  0.576346                  0.028579
+pos_statistics_std_deviation    0.927260                 0.107469                  NaN  ...                      1.000000                  0.972881                  0.232264
+pos_statistics_max_count        0.868975                 0.056334                  NaN  ...                      0.972881                  1.000000                  0.294138
+pos_statistics_min_count        0.182451                 0.046101                  NaN  ...                      0.232264                  0.294138                  1.000000
+
+[105 rows x 105 columns]
+---------------------------------
+t-statistic: 1.3087830291385198
+p-value: 0.19276756819257587
+---------------------------------
+
+T-statistic: The t-statistic measures the difference between the means of the two groups relative to the variation in the data. In this case, the t-statistic is approximately 1.309.
+
+P-value: The p-value is the probability of observing a t-statistic as extreme as the one computed from the data, assuming that the null hypothesis is true. In this case, the p-value is approximately 0.193.
+
+Since the p-value is greater than the typical significance level of 0.05, we fail to reject the null hypothesis. Therefore, we do not have sufficient evidence to conclude that there is a significant difference in the word count between genders based on the data provided.
+
+There is no statistically significant difference in word count between males and females in the dataset.

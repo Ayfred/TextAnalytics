@@ -199,7 +199,7 @@ def pos_statistics(text):
     # Convert counts to a numpy array
     counts_array = np.array(list(pos_counts.values()))
     
-    # Compute descriptive statistics
+    # Compute descriptive statistics_results
     mean_count = np.mean(counts_array)
     median_count = np.median(counts_array)
     std_deviation = np.std(counts_array)
