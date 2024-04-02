@@ -1,22 +1,24 @@
+Feature:word_count
+---------------------------------
 Correlation matrix:
-                              word_count  average_sentence_length  average_word_length  ...  pos_statistics_max_count  pos_statistics_min_count  gender_encoded
-word_count                      1.000000                 0.150338                  NaN  ...                  0.868975                  0.182451        0.110332
-average_sentence_length         0.150338                 1.000000                  NaN  ...                  0.056334                  0.046101        0.163826
-average_word_length                  NaN                      NaN                  NaN  ...                       NaN                       NaN             NaN
-total_count_punctuation         0.819467                 0.181482                  NaN  ...                  0.605680                  0.124867        0.136356
-lexical_diversity              -0.760146                -0.162895                  NaN  ...                 -0.619187                 -0.077610       -0.223362
-...                                  ...                      ...                  ...  ...                       ...                       ...             ...
-pos_statistics_median_count     0.784710                 0.178160                  NaN  ...                  0.576346                  0.028579        0.205510
-pos_statistics_std_deviation    0.927260                 0.107469                  NaN  ...                  0.972881                  0.232264        0.024761
-pos_statistics_max_count        0.868975                 0.056334                  NaN  ...                  1.000000                  0.294138       -0.055918
-pos_statistics_min_count        0.182451                 0.046101                  NaN  ...                  0.294138                  1.000000       -0.087385
-gender_encoded                  0.110332                 0.163826                  NaN  ...                 -0.055918                 -0.087385        1.000000
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
 
 [106 rows x 106 columns]
 ---------------------------------
 T-test:
 t-statistic: 1.3087830291385198
-p-value: 0.19276756819257587
+p-value: 0.1927675681925759
 ---------------------------------
 Chi-square test:
 Chi-square statistic: 103.66478873239437
@@ -24,7 +26,7 @@ p-value: 0.38092170794980973
 ---------------------------------
 One-way ANOVA:
 F-statistic: 1.11063829787234
-p-value: 0.36160577428297463
+p-value: 0.36160577428297674
 ---------------------------------
 Mann-Whitney U test:
 U-statistic: 19881.0
@@ -41,4 +43,2100 @@ p-value: 1.1882130015300011e-64
 Sign test:
 Test statistic: 0.0
 p-value: 6.911316685663399e-25
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:average_sentence_length
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.9579289668289483
+p-value: 0.05224116505610577
+---------------------------------
+Chi-square test:
+Chi-square statistic: 113.99864185110664
+p-value: 0.3525251239811492
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.2007407889378066
+p-value: 0.28489674019288974
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19881.0
+p-value: 3.1238955302259672e-49
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 113.1901408450705
+p-value: 0.3724904205697647
+---------------------------------
+Paired t-test:
+t-statistic: 50.73706018528591
+p-value: 5.163156202885365e-92
+---------------------------------
+Sign test:
+Test statistic: 0.0
+p-value: 6.917002308645094e-25
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:lexical_diversity
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -2.7016576941665558
+p-value: 0.007758709008287936
+---------------------------------
+Chi-square test:
+Chi-square statistic: 136.99979879275654
+p-value: 0.3883521419842565
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.8025382605449523
+p-value: 0.208685775358387
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 10011.0
+p-value: 0.917276216135495
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 136.0281690140846
+p-value: 0.41095384180510997
+---------------------------------
+Paired t-test:
+t-statistic: 3.3025405915776007
+p-value: 0.0012162010070964216
+---------------------------------
+Sign test:
+Test statistic: 2485.0
+p-value: 2.1330214644310042e-07
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_foreign_words
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.3087830291385198
+p-value: 0.1927675681925759
+---------------------------------
+Chi-square test:
+Chi-square statistic: 103.66478873239437
+p-value: 0.38092170794980973
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.11063829787234
+p-value: 0.36160577428297674
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19881.0
+p-value: 3.122010714776366e-49
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 102.9295774647888
+p-value: 0.40043839760435496
+---------------------------------
+Paired t-test:
+t-statistic: 31.050298710430567
+p-value: 1.1882130015300011e-64
+---------------------------------
+Sign test:
+Test statistic: 0.0
+p-value: 6.911316685663399e-25
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_wh_words
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 0.43524674639679123
+p-value: 0.6640584009978716
+---------------------------------
+Chi-square test:
+Chi-square statistic: 9.0074428971293
+p-value: 0.3416684703913888
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.1259938519624384
+p-value: 0.3499771391081946
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 16476.5
+p-value: 1.0948703115461498e-23
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 8.943560323390784
+p-value: 0.3470795164105091
+---------------------------------
+Paired t-test:
+t-statistic: 11.295130968391165
+p-value: 1.962683790983722e-21
+---------------------------------
+Sign test:
+Test statistic: 216.0
+p-value: 6.459653785541283e-18
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:sentiment_score
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 0.2916159350326473
+p-value: 0.7710150365268511
+---------------------------------
+Chi-square test:
+Chi-square statistic: 136.99979879275654
+p-value: 0.3199883159178649
+---------------------------------
+One-way ANOVA:
+F-statistic: 2.634478996181084
+p-value: 0.04636734834593583
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 8449.0
+p-value: 0.026719214020384068
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 136.0281690140846
+p-value: 0.34111319381511684
+---------------------------------
+Paired t-test:
+t-statistic: -9.880941051471245
+p-value: 8.559815329513849e-18
+---------------------------------
+Sign test:
+Test statistic: 2086.0
+p-value: 1.4017152732372153e-08
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:subjectivity_score
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.5136411544124984
+p-value: 0.13238736692601688
+---------------------------------
+Chi-square test:
+Chi-square statistic: 138.99989939637825
+p-value: 0.41257024508682927
+---------------------------------
+One-way ANOVA:
+F-statistic: 2.0440133500207995
+p-value: 0.25637023566135136
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 9975.5
+p-value: 0.9591591048563882
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 138.0140845070423
+p-value: 0.43568783170684217
+---------------------------------
+Paired t-test:
+t-statistic: -3.5060467648393496
+p-value: 0.0006114971905021899
+---------------------------------
+Sign test:
+Test statistic: 2722.0
+p-value: 4.16026239964558e-06
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_slang
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -1.9342133295561275
+p-value: 0.05511862627124804
+---------------------------------
+Chi-square test:
+Chi-square statistic: 5.329831480577819
+p-value: 0.25509725979388886
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.3356972451442313
+p-value: 0.25986981815762533
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 6236.5
+p-value: 8.554405255777432e-12
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 5.292031257311389
+p-value: 0.2586238302492846
+---------------------------------
+Paired t-test:
+t-statistic: -3.384937298017344
+p-value: 0.0009239697506558132
+---------------------------------
+Sign test:
+Test statistic: 748.0
+p-value: 7.292087715891271e-06
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_VERB
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -0.1836604741810187
+p-value: 0.8545474641344984
+---------------------------------
+Chi-square test:
+Chi-square statistic: 27.047370717813372
+p-value: 0.56914922482766
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.9085015742458492
+p-value: 0.6037840978122224
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19846.0
+p-value: 5.916595666385859e-49
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 26.855545393573646
+p-value: 0.5794986665875962
+---------------------------------
+Paired t-test:
+t-statistic: 26.489613707761485
+p-value: 2.1625101861877915e-56
+---------------------------------
+Sign test:
+Test statistic: 0.0
+p-value: 6.596630772401896e-25
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_NOUN
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -0.4422410590589161
+p-value: 0.6590021144983772
+---------------------------------
+Chi-square test:
+Chi-square statistic: 49.86208249496982
+p-value: 0.5188731525521665
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.9547532440422525
+p-value: 0.5646702121220157
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19881.0
+p-value: 3.085013549144866e-49
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 49.508450704225346
+p-value: 0.533041459435431
+---------------------------------
+Paired t-test:
+t-statistic: 27.66235654500329
+p-value: 1.3202953666424956e-58
+---------------------------------
+Sign test:
+Test statistic: 0.0
+p-value: 6.836066304871231e-25
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_ADJ
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.0957277383825519
+p-value: 0.27509280318646206
+---------------------------------
+Chi-square test:
+Chi-square statistic: 28.101103373487675
+p-value: 0.7096977196920893
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.8070557068284868
+p-value: 0.7560979131954827
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19775.5
+p-value: 2.82734078351149e-48
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 27.901804768001966
+p-value: 0.71899145962248
+---------------------------------
+Paired t-test:
+t-statistic: 22.9552380861011
+p-value: 2.637596847448714e-49
+---------------------------------
+Sign test:
+Test statistic: 0.0
+p-value: 9.83978647692262e-25
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_ADV
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.9289945021422092
+p-value: 0.05576945643610798
+---------------------------------
+Chi-square test:
+Chi-square statistic: 16.550502471844645
+p-value: 0.346437184858837
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.1082475756949974
+p-value: 0.35585648973025413
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 17984.5
+p-value: 1.2393926511549194e-33
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 16.433123021689806
+p-value: 0.35386436671532295
+---------------------------------
+Paired t-test:
+t-statistic: 11.93018026596824
+p-value: 4.466107858858546e-23
+---------------------------------
+Sign test:
+Test statistic: 50.0
+p-value: 1.133588153436388e-21
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_PRON
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 2.0038873018161567
+p-value: 0.04702553183448875
+---------------------------------
+Chi-square test:
+Chi-square statistic: 17.753097028725797
+p-value: 0.404575013816877
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.0422077586152045
+p-value: 0.4185412195191725
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19074.0
+p-value: 2.3559064432247196e-42
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 17.627188539160443
+p-value: 0.4127168075881546
+---------------------------------
+Paired t-test:
+t-statistic: 16.907373739042207
+p-value: 1.2402407504783316e-35
+---------------------------------
+Sign test:
+Test statistic: 16.0
+p-value: 5.6883934951198915e-24
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_CCONJ
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -0.30440603181921777
+p-value: 0.7612738338102396
+---------------------------------
+Chi-square test:
+Chi-square statistic: 13.420483426877052
+p-value: 0.7076140625757167
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.7611029372321639
+p-value: 0.7336884024710695
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19460.0
+p-value: 1.2985698384785405e-45
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 13.3253026933531
+p-value: 0.7141513442174734
+---------------------------------
+Paired t-test:
+t-statistic: 18.418843167590275
+p-value: 3.0991436532965545e-39
+---------------------------------
+Sign test:
+Test statistic: 5.5
+p-value: 2.083657248494322e-24
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_ADP
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.9547646563867769
+p-value: 0.052617600266069424
+---------------------------------
+Chi-square test:
+Chi-square statistic: 46.95399971256108
+p-value: 0.10454004108386802
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.4423249010476746
+p-value: 0.07841947056697524
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19775.5
+p-value: 2.845642839113767e-48
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 46.62099262240107
+p-value: 0.11063959262038985
+---------------------------------
+Paired t-test:
+t-statistic: 26.078795010931216
+p-value: 1.337439353723792e-55
+---------------------------------
+Sign test:
+Test statistic: 0.0
+p-value: 9.85084075781056e-25
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_DET
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.6232821415590413
+p-value: 0.10679486476982668
+---------------------------------
+Chi-square test:
+Chi-square statistic: 37.66998294964593
+p-value: 0.19041791785611675
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.2818397255210994
+p-value: 0.17569800035222574
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19775.5
+p-value: 2.808073376779749e-48
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 37.40281995000305
+p-value: 0.19863308597795903
+---------------------------------
+Paired t-test:
+t-statistic: 24.164866236822856
+p-value: 8.390499935135136e-52
+---------------------------------
+Sign test:
+Test statistic: 0.0
+p-value: 9.717295270463847e-25
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_NUM
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 2.1973206707966595
+p-value: 0.0296536018755954
+---------------------------------
+Chi-square test:
+Chi-square statistic: 9.729284945598957
+p-value: 0.4645565203748554
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.9635104390219139
+p-value: 0.47836171021660057
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 14154.0
+p-value: 6.142437794353333e-11
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 9.66028292470825
+p-value: 0.4707860396895749
+---------------------------------
+Paired t-test:
+t-statistic: 8.24202490462046
+p-value: 1.095350192733845e-13
+---------------------------------
+Sign test:
+Test statistic: 396.0
+p-value: 1.2170543116257347e-13
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_X
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 2.6519781101191096
+p-value: 0.008932300263739633
+---------------------------------
+Chi-square test:
+Chi-square statistic: 7.485592013620184
+p-value: 0.1123463048911019
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.9062371792042816
+p-value: 0.11290710109275129
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 6026.0
+p-value: 3.857503975372134e-13
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 7.432502708559089
+p-value: 0.11472273350035254
+---------------------------------
+Paired t-test:
+t-statistic: -5.293003686682697
+p-value: 4.5432753298944175e-07
+---------------------------------
+Sign test:
+Test statistic: 472.0
+p-value: 4.940849446193741e-07
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_SYM
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 0.2378972110969061
+p-value: 0.8123111370919726
+---------------------------------
+Chi-square test:
+Chi-square statistic: 0.41118489397926017
+p-value: 0.8141648240008972
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.20180664915038407
+p-value: 0.8174936793479433
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 6238.5
+p-value: 1.3445146146262474e-11
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 0.4082686890574981
+p-value: 0.8153528256379103
+---------------------------------
+Paired t-test:
+t-statistic: -6.757655970913211
+p-value: 3.479018736432027e-10
+---------------------------------
+Sign test:
+Test statistic: 396.0
+p-value: 3.886035200107523e-09
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_PART
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 0.16532631892710126
+p-value: 0.8689273490026922
+---------------------------------
+Chi-square test:
+Chi-square statistic: 7.6918827284331615
+p-value: 0.7406097149243329
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.6766640200819493
+p-value: 0.7584988914800301
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 18337.0
+p-value: 1.4919750419993423e-36
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 7.637330368657179
+p-value: 0.745375608213559
+---------------------------------
+Paired t-test:
+t-statistic: 15.467002091201168
+p-value: 4.2883981908890075e-32
+---------------------------------
+Sign test:
+Test statistic: 21.0
+p-value: 7.72103417477935e-22
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_SPACE
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -1.2637429058411778
+p-value: 0.20843763373095364
+---------------------------------
+Chi-square test:
+Chi-square statistic: 8.36822049178186
+p-value: 0.21234834180109566
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.4090910816605215
+p-value: 0.21560512243835314
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 13815.5
+p-value: 1.6058064609325655e-11
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 8.308871410279911
+p-value: 0.21633661505107193
+---------------------------------
+Paired t-test:
+t-statistic: 5.713241990871483
+p-value: 6.403121053855977e-08
+---------------------------------
+Sign test:
+Test statistic: 315.0
+p-value: 1.0352867721661676e-09
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_SCONJ
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -1.1953898290034968
+p-value: 0.23397019873348596
+---------------------------------
+Chi-square test:
+Chi-square statistic: 10.194854287012397
+p-value: 0.3349422995012438
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.1344490092232582
+p-value: 0.3431733259056495
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 16826.0
+p-value: 1.1804823338891215e-25
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 10.12255035589889
+p-value: 0.34065552538271143
+---------------------------------
+Paired t-test:
+t-statistic: 11.289146825179198
+p-value: 2.0338821001678156e-21
+---------------------------------
+Sign test:
+Test statistic: 215.0
+p-value: 9.878576780658311e-19
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_PROPN
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.747967536310255
+p-value: 0.08267770070932277
+---------------------------------
+Chi-square test:
+Chi-square statistic: 30.382459105281036
+p-value: 0.39509765680414033
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.0512933162531024
+p-value: 0.4100473168282339
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19108.0
+p-value: 1.8962535755270937e-42
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 30.16698067191025
+p-value: 0.40570242880435375
+---------------------------------
+Paired t-test:
+t-statistic: 16.80639935702449
+p-value: 2.1794122557910297e-35
+---------------------------------
+Sign test:
+Test statistic: 7.0
+p-value: 5.190780219007118e-24
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:count_AUX
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.5360744577234267
+p-value: 0.12679327604620141
+---------------------------------
+Chi-square test:
+Chi-square statistic: 14.269069036065131
+p-value: 0.42986367189201047
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.013340787034323
+p-value: 0.4444047444809585
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 17458.0
+p-value: 7.677801981929188e-30
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 14.167869964887435
+p-value: 0.43728096378201176
+---------------------------------
+Paired t-test:
+t-statistic: 12.972369728084082
+p-value: 9.111721734135534e-26
+---------------------------------
+Sign test:
+Test statistic: 116.0
+p-value: 1.222345250279114e-20
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_ADJ
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.1781277870640994
+p-value: 0.2407586993699457
+---------------------------------
+Chi-square test:
+Chi-square statistic: 130.99949698189135
+p-value: 0.5082422317799953
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.7938964109176774
+p-value: 0.729937557868928
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 9975.5
+p-value: 0.9591590935786938
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 130.07042253521135
+p-value: 0.5311835964054713
+---------------------------------
+Paired t-test:
+t-statistic: -9.489701231576573
+p-value: 8.471315957624909e-17
+---------------------------------
+Sign test:
+Test statistic: 2485.0
+p-value: 3.465634986850159e-07
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_ADP
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 2.3535152207025303
+p-value: 0.019997885593780747
+---------------------------------
+Chi-square test:
+Chi-square statistic: 128.33269617706236
+p-value: 0.47510273902498956
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.9497830347144341
+p-value: 0.5945139757687177
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 9975.5
+p-value: 0.9591590597455542
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 127.42253521126759
+p-value: 0.49778511745852305
+---------------------------------
+Paired t-test:
+t-statistic: -8.729421630786515
+p-value: 6.882806388088062e-15
+---------------------------------
+Sign test:
+Test statistic: 2485.0
+p-value: 3.465559341114247e-07
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_ADV
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.7219864280956347
+p-value: 0.08729641254173483
+---------------------------------
+Chi-square test:
+Chi-square statistic: 116.69108497136665
+p-value: 0.49066698898665856
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.9436568060322391
+p-value: 0.599670375158854
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 9549.5
+p-value: 0.5601780618779657
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 115.86348862405202
+p-value: 0.5123267665228088
+---------------------------------
+Paired t-test:
+t-statistic: -11.216348996408733
+p-value: 3.137357568195568e-21
+---------------------------------
+Sign test:
+Test statistic: 2016.0
+p-value: 4.285080597457548e-08
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_AUX
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 0.8230963336564137
+p-value: 0.41186310552687233
+---------------------------------
+Chi-square test:
+Chi-square statistic: 116.99879275653925
+p-value: 0.534728501252245
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.8602419691280725
+p-value: 0.7032243310715662
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 9443.0
+p-value: 0.45772457780205866
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 116.16901408450713
+p-value: 0.5563273759512646
+---------------------------------
+Paired t-test:
+t-statistic: -11.203457487713564
+p-value: 3.3876131572281606e-21
+---------------------------------
+Sign test:
+Test statistic: 2016.0
+p-value: 4.2825303418128817e-08
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_DET
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.7166547445060725
+p-value: 0.0882697962022163
+---------------------------------
+Chi-square test:
+Chi-square statistic: 131.66619718309857
+p-value: 0.3941305639631865
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.3224734042553041
+p-value: 0.30599512353180075
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 9975.5
+p-value: 0.9591590484678224
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 130.73239436619724
+p-value: 0.4163721951166464
+---------------------------------
+Paired t-test:
+t-statistic: -9.504297610671639
+p-value: 7.779369578057496e-17
+---------------------------------
+Sign test:
+Test statistic: 2485.0
+p-value: 3.465508911406777e-07
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_NOUN
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -2.847645602398114
+p-value: 0.005073088097712696
+---------------------------------
+Chi-square test:
+Chi-square statistic: 136.9997987927565
+p-value: 0.4119411541933956
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.533502699269586
+p-value: 0.31164850851888715
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 10011.0
+p-value: 0.9172762275179516
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 136.0281690140846
+p-value: 0.4348824229096798
+---------------------------------
+Paired t-test:
+t-statistic: -6.369060761690602
+p-value: 2.552568057731561e-09
+---------------------------------
+Sign test:
+Test statistic: 2556.0
+p-value: 4.6254727007647894e-07
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_NUM
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.2785875300633125
+p-value: 0.20317303874574516
+---------------------------------
+Chi-square test:
+Chi-square statistic: 89.78530272544356
+p-value: 0.36874653727382245
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.1007937367698333
+p-value: 0.35590407368082394
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 8449.0
+p-value: 0.022963834799446498
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 89.14852752880931
+p-value: 0.3867069421487822
+---------------------------------
+Paired t-test:
+t-statistic: -11.506334877219444
+p-value: 5.578625911842751e-22
+---------------------------------
+Sign test:
+Test statistic: 1035.0
+p-value: 1.3467719102223705e-10
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_PART
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -0.8180828056274947
+p-value: 0.41471009628952493
+---------------------------------
+Chi-square test:
+Chi-square statistic: 122.33239436619719
+p-value: 0.37375727460313063
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.221781464118276
+p-value: 0.3023004172961437
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 9727.0
+p-value: 0.751216831104861
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 121.46478873239448
+p-value: 0.39485894783778863
+---------------------------------
+Paired t-test:
+t-statistic: -11.159836511891266
+p-value: 4.3919794625565245e-21
+---------------------------------
+Sign test:
+Test statistic: 2145.0
+p-value: 7.878781411749385e-08
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_PRON
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.3320274120267561
+p-value: 0.1850311026357032
+---------------------------------
+Chi-square test:
+Chi-square statistic: 125.6658953722334
+p-value: 0.441322523441267
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.0574438244158544
+p-value: 0.4801515041857564
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 9869.0
+p-value: 0.9159753438849346
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 124.77464788732398
+p-value: 0.46358108013316723
+---------------------------------
+Paired t-test:
+t-statistic: -10.949188649674207
+p-value: 1.5378564030117973e-20
+---------------------------------
+Sign test:
+Test statistic: 2415.0
+p-value: 2.5897477517053654e-07
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_PROPN
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 0.4350059287207543
+p-value: 0.6642327687469725
+---------------------------------
+Chi-square test:
+Chi-square statistic: 124.99919517102614
+p-value: 0.5585414228831784
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.7323803191489284
+p-value: 0.8091696470626432
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 9798.0
+p-value: 0.8327482499327419
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 124.11267605633809
+p-value: 0.5806955890909782
+---------------------------------
+Paired t-test:
+t-statistic: -9.98530417876372
+p-value: 4.632180653728044e-18
+---------------------------------
+Sign test:
+Test statistic: 2278.0
+p-value: 1.4354209925476254e-07
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_SCONJ
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -1.7637149004224009
+p-value: 0.079977050182835
+---------------------------------
+Chi-square test:
+Chi-square statistic: 98.99788732394367
+p-value: 0.5932501946420821
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.8466799788840684
+p-value: 0.7460318294097587
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 9301.0
+p-value: 0.33861887320247597
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 98.29577464788736
+p-value: 0.6126515819546791
+---------------------------------
+Paired t-test:
+t-statistic: -11.34649430051564
+p-value: 1.445475616922247e-21
+---------------------------------
+Sign test:
+Test statistic: 1891.0
+p-value: 2.307724142691773e-08
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_SYM
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -1.1903158353197596
+p-value: 0.23595122356896814
+---------------------------------
+Chi-square test:
+Chi-square statistic: 16.001712676056336
+p-value: 0.4528412826303888
+---------------------------------
+One-way ANOVA:
+F-statistic: 0.9921197793538217
+p-value: 0.469683264206624
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 5573.5
+p-value: 2.453665029049894e-15
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 15.888225352112764
+p-value: 0.4607887917064053
+---------------------------------
+Paired t-test:
+t-statistic: -11.69597542512579
+p-value: 1.8024395184852313e-22
+---------------------------------
+Sign test:
+Test statistic: 36.0
+p-value: 1.2197036749837966e-15
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_distribution_VERB
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -1.9886481147825001
+p-value: 0.04870362994328225
+---------------------------------
+Chi-square test:
+Chi-square statistic: 130.99949698189133
+p-value: 0.3621408823125255
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.4554767533490842
+p-value: 0.21648310931131556
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 10011.0
+p-value: 0.9172761364581673
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 130.07042253521135
+p-value: 0.3837668258593386
+---------------------------------
+Paired t-test:
+t-statistic: -9.49291504749517
+p-value: 8.31388068759782e-17
+---------------------------------
+Sign test:
+Test statistic: 2556.0
+p-value: 4.6253113924169604e-07
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_statistics_mean_count
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 1.117878636821415
+p-value: 0.2655471825988827
+---------------------------------
+Chi-square test:
+Chi-square statistic: 132.99959758551307
+p-value: 0.29546402342751515
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.9948936170212606
+p-value: 0.06386646242681605
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19881.0
+p-value: 3.1274797577374106e-49
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 132.05633802816905
+p-value: 0.31556545688178955
+---------------------------------
+Paired t-test:
+t-statistic: 32.76409879729345
+p-value: 1.587983791318667e-67
+---------------------------------
+Sign test:
+Test statistic: 0.0
+p-value: 6.922692434901661e-25
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_statistics_median_count
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 2.475772837954424
+p-value: 0.014496157656277951
+---------------------------------
+Chi-square test:
+Chi-square statistic: 37.42117152110524
+p-value: 0.052632524727759436
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.6618974314056751
+p-value: 0.03803210216533836
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19846.0
+p-value: 5.747344425204575e-49
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 37.155773141522936
+p-value: 0.055801032161491855
+---------------------------------
+Paired t-test:
+t-statistic: 29.251982940070977
+p-value: 1.663907018117576e-61
+---------------------------------
+Sign test:
+Test statistic: 0.0
+p-value: 6.282342424210981e-25
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_statistics_std_deviation
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: 0.2920232027157834
+p-value: 0.7707042804648427
+---------------------------------
+Chi-square test:
+Chi-square statistic: 141.0
+p-value: 0.43670380811000475
+---------------------------------
+One-way ANOVA:
+F-statistic: inf
+p-value: 0.0
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19881.0
+p-value: 3.1288012800611106e-49
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 140.0
+p-value: 0.4602489050705632
+---------------------------------
+Paired t-test:
+t-statistic: 28.78553363044525
+p-value: 1.1484622812076674e-60
+---------------------------------
+Sign test:
+Test statistic: 0.0
+p-value: 6.927208498016089e-25
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_statistics_max_count
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -0.6602929844677933
+p-value: 0.5101585507263972
+---------------------------------
+Chi-square test:
+Chi-square statistic: 52.86223340040241
+p-value: 0.36416206437187143
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.0795828370940233
+p-value: 0.37042159601260216
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 19881.0
+p-value: 3.0840825204624128e-49
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 52.48732394366198
+p-value: 0.37783104890504465
+---------------------------------
+Paired t-test:
+t-statistic: 28.571940854567394
+p-value: 2.8024974067079523e-60
+---------------------------------
+Sign test:
+Test statistic: 0.0
+p-value: 6.829669714153713e-25
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+Feature:pos_statistics_min_count
+---------------------------------
+Correlation matrix:
+                              word_count  ...  gender_encoded
+word_count                      1.000000  ...        0.110332
+average_sentence_length         0.150338  ...        0.163826
+average_word_length                  NaN  ...             NaN
+total_count_punctuation         0.819467  ...        0.136356
+lexical_diversity              -0.760146  ...       -0.223362
+...                                  ...  ...             ...
+pos_statistics_median_count     0.784710  ...        0.205510
+pos_statistics_std_deviation    0.927260  ...        0.024761
+pos_statistics_max_count        0.868975  ...       -0.055918
+pos_statistics_min_count        0.182451  ...       -0.087385
+gender_encoded                  0.110332  ...        1.000000
+
+[106 rows x 106 columns]
+---------------------------------
+T-test:
+t-statistic: -1.0342120470276097
+p-value: 0.30283302195559375
+---------------------------------
+Chi-square test:
+Chi-square statistic: 4.061814397837406
+p-value: 0.25486618971854175
+---------------------------------
+One-way ANOVA:
+F-statistic: 1.3545493052376094
+p-value: 0.2594110054736618
+---------------------------------
+Mann-Whitney U test:
+U-statistic: 15296.0
+p-value: 3.521332598655981e-23
+---------------------------------
+Kruskal-Wallis H test:
+H-statistic: 4.03300720352657
+p-value: 0.2579219357227402
+---------------------------------
+Paired t-test:
+t-statistic: 10.124300023094536
+p-value: 2.0415898866932776e-18
+---------------------------------
+Sign test:
+Test statistic: 0.0
+p-value: 2.700894751849637e-16
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
 ---------------------------------

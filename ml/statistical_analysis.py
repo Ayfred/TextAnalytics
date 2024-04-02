@@ -12,10 +12,14 @@ data = data.dropna()
 
 def perform_tests(data, column1, column2, output_file_name):
 
-    with open(output_file_name, 'w') as f:
+    with open(output_file_name, 'a') as f:
         # Redirecting print statements to the file
         original_stdout = sys.stdout
         sys.stdout = f
+
+        # Feature name
+        print("Feature:" + column1)
+        print("---------------------------------", file=f)
 
         # Correlation analysis
         print("Correlation matrix:")
@@ -76,11 +80,35 @@ def perform_tests(data, column1, column2, output_file_name):
         print(f"Test statistic: {stat}")
         print(f"p-value: {p_value}")
         print("---------------------------------", file=f)
+        print("---------------------------------", file=f)
+        print("---------------------------------", file=f)
+        print("---------------------------------", file=f)
+        print("---------------------------------", file=f)
+        print("---------------------------------", file=f)
+        
     sys.stdout = original_stdout
 
 
 label_encoder = LabelEncoder()
 data['gender_encoded'] = label_encoder.fit_transform(data['gender'])
 
-# Now, you can use the perform_tests method to analyze the gender differences
-perform_tests(data, 'word_count', 'gender_encoded', 'statistical_analysis.txt')
+
+column_names = [
+    'word_count', 'average_sentence_length',
+    'lexical_diversity', 'count_foreign_words', 'count_wh_words',
+    'sentiment_score', 'subjectivity_score', 'count_slang', 'count_VERB',
+    'count_NOUN', 'count_ADJ', 'count_ADV', 'count_PRON', 'count_CCONJ', 'count_ADP', 'count_DET',
+    'count_NUM', 'count_X', 'count_SYM', 'count_PART', 'count_SPACE', 
+    'count_SCONJ', 'count_PROPN', 'count_AUX', 'pos_distribution_ADJ', 'pos_distribution_ADP',
+    'pos_distribution_ADV', 'pos_distribution_AUX', 'pos_distribution_DET',
+    'pos_distribution_NOUN', 'pos_distribution_NUM', 'pos_distribution_PART',
+    'pos_distribution_PRON', 'pos_distribution_PROPN', 'pos_distribution_SCONJ',
+    'pos_distribution_SYM', 'pos_distribution_VERB', 'pos_statistics_mean_count',
+    'pos_statistics_median_count', 'pos_statistics_std_deviation', 'pos_statistics_max_count',
+    'pos_statistics_min_count'
+]
+
+for column_name in column_names:
+    print(column_name)
+    perform_tests(data, column_name, 'gender_encoded', 'statistical_analysis.txt')
+
