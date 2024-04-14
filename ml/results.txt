@@ -14,7 +14,7 @@ weighted avg       0.54      0.55      0.54        29
 
 
 Linear Regression
-Training MSE: 5.191536758090233e-30
+Training MSE: 5.191536758090233e-30 
 Test MSE: 1.5409035007264051
 
 Decision Tree
@@ -37,7 +37,7 @@ Training Accuracy: 1.0
 Test Accuracy: 0.6551724137931034
 
 Classification Report:
-              precision    recall  f1-score   support
+              precision    recall  f1-score   support 
 
            0       0.75      0.56      0.64        16
            1       0.59      0.77      0.67        13

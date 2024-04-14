@@ -2,10 +2,12 @@ import pandas as pd
 from scipy import stats
 from sklearn.preprocessing import LabelEncoder
 import sys
-import os
+import seaborn as sns
 
 # Read the data
-data = pd.read_csv("./dataset/features.csv")
+#data = pd.read_csv("./dataset/features.csv")
+data = pd.read_csv("../dataset/features.csv")
+
 
 # preprocessing the nan values
 data = data.dropna()
@@ -24,6 +26,11 @@ def perform_tests(data, column1, column2, output_file_name):
         # Correlation analysis
         print("Correlation matrix:")
         correlation_matrix = data.corr()
+        import matplotlib.pyplot as plt
+        plt.figure(figsize=(10,10))
+        sns.heatmap(correlation_matrix, annot=True)
+        plt.show()
+        
         print(correlation_matrix)
         print("---------------------------------", file=f)
         
@@ -112,3 +119,4 @@ for column_name in column_names:
     print(column_name)
     perform_tests(data, column_name, 'gender_encoded', 'statistical_analysis.txt')
 
+#perform_tests(data, 'word_count', 'gender_encoded', 'statistical_analysis.txt')

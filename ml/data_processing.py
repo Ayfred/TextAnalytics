@@ -18,7 +18,7 @@ y = y.map(gender_mapping)
 tfidf_vectorizer = TfidfVectorizer(max_features=1000)
 X_text_vectorized = tfidf_vectorizer.fit_transform(X_text) 
 
-# 2. Encode target labels
+# Encode target labels
 label_encoder = LabelEncoder()
 y_encoded = label_encoder.fit_transform(y)
 

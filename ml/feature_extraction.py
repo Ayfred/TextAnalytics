@@ -1,9 +1,11 @@
-import io
 import string
 import pandas as pd
 import spacy
 from gensim.parsing import PorterStemmer
 from spacytextblob.spacytextblob import SpacyTextBlob
+from collections import Counter
+import re
+import numpy as np
 
 nlp = spacy.load('en_core_web_sm')
 
@@ -88,7 +90,6 @@ def word_count(text):
 def count_pos(text):
     doc = nlp(text)
     pos_counts = {}
-
     pos_to_count = ["VERB", "NOUN", "ADJ", "ADV", "PRON", "CCONJ", "ADP", "DET", "NUM", "X", "INTJ", "SYM", "PART", "SPACE", "PUNCT", "SCONJ", "PROPN", "AUX", "CONJ"]
 
     for pos_tag in pos_to_count:
@@ -161,11 +162,8 @@ def calculate_pronoun_densities(text):
 def delete_backslash_n(text):
     return text.replace('\n', '')
 
-from collections import Counter
-
 def pos_distribution(text):
     doc = nlp(text)
-    
     pos_counts = Counter()
     
     for token in doc:
@@ -174,32 +172,23 @@ def pos_distribution(text):
     total_tokens = len(doc)
     pos_distribution = {}
     
-    # Define all possible POS tags
     all_pos_tags = ['ADJ', 'ADP', 'ADV', 'AUX', 'CONJ', 'DET', 'INTJ', 'NOUN', 'NUM', 'PART', 'PRON', 'PROPN', 'PUNCT', 'SCONJ', 'SYM', 'VERB']
     
-    # Calculate distribution for each POS tag
     for pos_tag in all_pos_tags:
         pos_distribution[pos_tag] = pos_counts[pos_tag] / total_tokens if pos_counts[pos_tag] else 0
     
     return pos_distribution
 
 
-import numpy as np
 def pos_statistics(text):
-    # Process the text using spaCy
     doc = nlp(text)
-    
-    # Initialize a Counter to store the counts of different POS tags
     pos_counts = Counter()
     
-    # Iterate through tokens in the document and count POS tags
     for token in doc:
         pos_counts[token.pos_] += 1
     
-    # Convert counts to a numpy array
     counts_array = np.array(list(pos_counts.values()))
     
-    # Compute descriptive statistics_results
     mean_count = np.mean(counts_array)
     median_count = np.median(counts_array)
     std_deviation = np.std(counts_array)
@@ -262,7 +251,6 @@ def extract_features(text):
 
     return features
 
-import re
 # Function to determine target value based on file name
 def get_target(file_name):
     if re.match(r'^male', file_name):
@@ -293,7 +281,6 @@ def process_folder(folder_path):
 def export_to_csv(data, csv_filename):
     df = pd.DataFrame(data)
     
-    # Reorder columns with 'gender' as the first column
     cols = df.columns.tolist()
     if 'gender' in cols:
         cols.insert(0, cols.pop(cols.index('gender')))
